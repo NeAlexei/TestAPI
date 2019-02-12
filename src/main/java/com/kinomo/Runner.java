@@ -6,10 +6,8 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        Test01 getAll = new Test01();
-        System.out.println(getAll.getRequest());
-
-
+        Test01 getAllTheLatestCCT = new Test01();
+        System.out.println(getAllTheLatestCCT.getAllTheLatestCCTProjects());
 
     }
 

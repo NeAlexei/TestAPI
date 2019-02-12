@@ -6,16 +6,17 @@ import static com.jayway.restassured.RestAssured.given;
 
 public class Test01 {
 
-    public getRequest() {
-            given()
+    public String getAllTheLatestCCTProjects() {
+        return given()
+                .log().all()
                 .header("km-auth", "cd74cc155b1ba732eab768f6d07a2551a6149f1a18a98c18268c4c240d52c46a5bd6f9779701d962b6808780")
-                .contentType("")
-                .and()
                 .header("Content-Type", "application/json")
                 .when()
-                .get("http:/stage-platform" + "/api/v1/cct-projects")
+                .get("https://stage-platform.kino-mo.com" + "/api/v1/cct-projects")
                 .then()
                 .assertThat()
-                .statusCode(200);
+                .log().all()
+                .statusCode(200)
+                .extract().body().toString();
     }
 }
