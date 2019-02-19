@@ -11,7 +11,7 @@ public class Test02 { //POST - Save CCT ProjectContract
                 .header("Content-Type", "application/json")
                 .get(BASE_URL)
                 .then()
-                .statusCode(201)
+                .statusCode(200)
                 .log().all();
     }
 //                    .get("https://swapi.co/api/people/1")
