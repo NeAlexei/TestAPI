@@ -7,18 +7,27 @@ import static com.kinomo.config.Settings.*;
 
 public class Test01 {
 
-    public String getAllTheLatestCCTProjects() {
-        return given()
-                .log().all()
+    public void getAllTheLatestCCTVersions() {
+        given()
                 .header(KM_AUTH, SESSION_TOKEN)
                 .header("Content-Type", "application/json")
-                .when()
                 .get(BASE_URL)
                 .then()
-                .assertThat()
-                .log().all()
                 .statusCode(200)
-                .extract().body().toString();
+                .log().all();
     }
-}
+
+//                .log().all()
+//                .header(KM_AUTH, SESSION_TOKEN)
+//                .header("Content-Type", "application/json")
+//                .when()
+//                .get(BASE_URL)
+//                .then()
+//                .assertThat()
+//                .log().all()
+//                .statusCode(200)
+//                .extract().body().toString();
+
+    }
+
 
