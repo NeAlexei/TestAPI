@@ -1,26 +1,25 @@
 package test;
 
 import static com.jayway.restassured.RestAssured.given;
-import static com.kinomo.config.Settings.KM_AUTH;
-import static com.kinomo.config.Settings.SESSION_TOKEN;
+import static com.kinomo.config.Settings.*;
 
-public class Test02 { //POST - create new 3D model
+public class Test02 { //POST - Save CCT ProjectContract
 
-    public String getAllPeople(){
-        return given()
+    public void createNewCCTProject() {
+            given()
                 .header(KM_AUTH, SESSION_TOKEN)
                 .header("Content-Type", "application/json")
-
-
-
-
-
-                .when()
-                    .get("https://swapi.co/api/people/1")
+                .get(BASE_URL)
                 .then()
-                    .assertThat()
-                    .statusCode(200)
-                .and()
-                .extract().body().asString();
+                .statusCode(201)
+                .log().all();
     }
-}
+
+//                    .get("https://swapi.co/api/people/1")
+//                .then()
+//                    .assertThat()
+//                    .statusCode(200)
+//                .and()
+//                .extract().body().asString();
+    }
+

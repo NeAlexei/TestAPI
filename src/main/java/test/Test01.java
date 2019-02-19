@@ -5,7 +5,7 @@ import org.apache.http.entity.ContentType;
 import static com.jayway.restassured.RestAssured.given;
 import static com.kinomo.config.Settings.*;
 
-public class Test01 {
+public class Test01 { //GET - Get all the latest CCT Project versions
 
     public void getAllTheLatestCCTVersions() {
         given()
