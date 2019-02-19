@@ -14,7 +14,6 @@ public class Test02 { //POST - Save CCT ProjectContract
                 .statusCode(201)
                 .log().all();
     }
-
 //                    .get("https://swapi.co/api/people/1")
 //                .then()
 //                    .assertThat()
@@ -23,3 +22,7 @@ public class Test02 { //POST - Save CCT ProjectContract
 //                .extract().body().asString();
     }
 
+    /* Create new CCT Project:
+     * 1.Запилить JSON
+     * 2.Прочитать JSON
+     * 3. */
