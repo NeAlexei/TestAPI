@@ -13,7 +13,7 @@ public class Test02 { //POST - Save CCT ProjectContract
                 .header("Content-Type", "application/json")
                 .body("{\n" +
                         "    \"scheme\": 0,\n" +
-                        "    \"projectName\": \"New_Project777\",\n" +
+                        "    \"projectName\": \"New_Project01\",\n" +
                         "    \"createdDate\": \"2019-02-05T14:34:46.233215Z\",\n" +
                         "    \"projectPreview\": null,\n" +
                         "    \"scenes\": [\n" +
@@ -109,7 +109,8 @@ public class Test02 { //POST - Save CCT ProjectContract
                 .post(BASE_URL)
                 .then().log().all()
                 .statusCode(201)
-                .body("projectName", Matchers.equalTo("New_Project777(6)"));
+                .body("projectName", Matchers.equalTo("New_Project01"));
+
     }
 }
 
