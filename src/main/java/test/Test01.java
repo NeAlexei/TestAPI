@@ -16,18 +16,6 @@ public class Test01 { //GET - Get all the latest CCT Project versions
                 .statusCode(200)
                 .log().all();
     }
-
-//                .log().all()
-//                .header(KM_AUTH, SESSION_TOKEN)
-//                .header("Content-Type", "application/json")
-//                .when()
-//                .get(BASE_URL)
-//                .then()
-//                .assertThat()
-//                .log().all()
-//                .statusCode(200)
-//                .extract().body().toString();
-
-    }
+}
 
 

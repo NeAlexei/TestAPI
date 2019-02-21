@@ -8,8 +8,8 @@ public class Runner {
 
     public static void main(String[] args) {
 
-//        Test01 getAllTheLatestCCT = new Test01();
-//        getAllTheLatestCCT.getAllTheLatestCCTVersions();
+        Test01 getAllTheLatestCCT = new Test01();
+        getAllTheLatestCCT.getAllTheLatestCCTVersions();
 
         Test02 createProject = new Test02();
         createProject.createNewCCTProject();
