@@ -107,10 +107,10 @@ public class Test02 { //POST - Save CCT ProjectContract
                         "    \"projectVersion\": 0\n" +
                         "}")
                 .post(BASE_URL)
+
                 .then().log().all()
                 .statusCode(201)
                 .body("projectName", Matchers.equalTo("New_Project01"));
-
     }
 }
 
