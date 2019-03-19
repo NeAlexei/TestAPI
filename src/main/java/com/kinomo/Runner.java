@@ -1,24 +1,34 @@
 package com.kinomo;
-import test
-import test
 
-import test.Test01;
-import test.Test02;
+import test.AuthenticationToken;
+import test.Cred;
+
+import static com.jayway.restassured.RestAssured.given;
 
 public class Runner {
 
     public static void main(String[] args) {
 
-        Cred NewCread = cred()
+        Cred NewCred = new Cred("a.nechitaylo@hypervsn.com", "4ebbz9w7", Boolean.FALSE );
+//        NewCred.setUsername("a.nechitaylo@hypervsn.com");
+//        NewCred.setPassword("4ebbz9w7");
+//        NewCred.setRememberMe(Boolean.FALSE);
 
-//        Test01 getAllTheLatestCCT = new Test01();
-//        getAllTheLatestCCT.getAllTheLatestCCTVersions();
-//
-//        Test02 createProject = new Test02();
-//        createProject.createNewCCTProject();
+        AuthenticationToken NewAuthToken =
+                given()
+                    .accept("application/json")
+                    .contentType("application/json")
+                    .body(NewCred)
+                    .expect()
+                    .statusCode(200)
+                    .when()
+                    .post("https://stage-platform.kino-mo.com")
+                    .then()
+                    .log().all()
+                    .extract()
+                    .body().as(AuthenticationToken.class);
 
-//        Test03 findProject = new Test03();
-//        findProject.findProjectById();
+//        assertNotNull(authenticationToken.getToken());
 
     }
 }

@@ -1,6 +1,6 @@
 package test;
 
-class AuthenticationToken {
+public class AuthenticationToken {
 
     public String token;
 

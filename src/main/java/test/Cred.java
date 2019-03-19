@@ -1,4 +1,4 @@
-
+package test;
 public class Cred {
 
     public String username;
