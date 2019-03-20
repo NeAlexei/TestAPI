@@ -1,9 +1,8 @@
 package com.kinomo;
 
-import test.Test01;
-import test.Test02;
-import test.Test03;
-import test.Test04;
+import test.*;
+
+import static com.jayway.restassured.RestAssured.given;
 
 public class Runner {
 
@@ -18,14 +17,19 @@ public class Runner {
 //        Test03 findProject = new Test03();
 //        findProject.findProjectById();
 
-        Test04 getToken = new Test04();
-        getToken.getSessionToken();
+//        Test04 getToken = new Test04();
+//        getToken.getSessionToken();
 
-//        Test05
+        Cred NewCred = new Cred();
+        NewCred.setUsername("");
+        NewCred.setPassword("");
+        NewCred.getRememberMe(Boolean);
 
-//        Test06
+        Auth NewAuth =
+                given()
+                .
 
-//        Test07
+
 
     }
 }
