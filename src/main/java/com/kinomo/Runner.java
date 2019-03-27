@@ -13,33 +13,13 @@ public class Runner {
 
     public static void main(String[] args) {
 
-//                JSONObject jsonObj = new JSONObject()
-//                        .put("username", EMAIL)
-//                        .put("password", PASSWORD)
-//                        .put("rememberMe", false);
-//               JsonPath jsonPath =
-//                         given()
-//                            .contentType("application/json") //another way to specify content type
-//                            .body(jsonObj.toString()) // use jsonObj toString method
-//                            .when()
-//                            .put("https://stage-platform.kino-mo.com/api/user/0/session")
-//                            .jsonPath();
-//                String a = jsonPath.getString("message.sessionToken");
-//                System.out.println(a);
-//            }
-//}
         GetToken getToken = new GetToken();
-        System.out.println(getToken.token());
         SESSION_TOKEN = getToken.token();
-        System.out.println(SESSION_TOKEN);
+        System.out.println("Session token is: " + SESSION_TOKEN);
 
         CreateClient cc = new CreateClient();
         cc.create();
 
-
-//
-//                CreateClient createClient = new CreateClient();
-////                createClient.create();
     }
 }
 

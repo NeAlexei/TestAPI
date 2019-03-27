@@ -12,15 +12,28 @@ public class CreateClient { //POST - Save CCT ProjectContract
             given().log().all()
                     .header(KM_AUTH, SESSION_TOKEN)
                     .header("Content-Type", "application/json")
-                    .body("{\"name\":\"TestClient\",\n" +
-                            "\"legalName\":\"\",\n" +
-                            "\"phone\":[\"000-00-00\"],\n" +
-                            "\"email\":[\"Emilo@gmail.com\"],\n" +
-                            "\"allowedPermissions\":[\"user:user:create:general\",\"user:user:read:general\"],\"defaultLocation\":{\"type\":\"Point\",\"coordinates\":[51.5073509,-0.12775829999998223]}}")
-                    .put(BASE_URL + "/client") //put - create; post - update
-                    .then().log().all()
-//                    .statusCode(201)
-                    .body("name", Matchers.equalTo("TestClient"));
+                    .body("{\n" +
+                            "  \"name\": \"Abdula Anusin\",\n" +
+                            "  \"legalName\": \"Testlegalname\",\n" +
+                            "  \"phone\": [\n" +
+                            "    \"0001122\"\n" +
+                            "  ],\n" +
+                            "  \"email\": [\n" +
+                            "    \"(___!___)@gmail.com\"\n" +
+                            "  ],\n" +
+                            "  \"allowedPermissions\": [\n" +
+                            "    \"user:user:create:general\",\n" +
+                            "    \"user:user:read:general\"\n" +
+                            "  ],\n" +
+                            "  \"defaultLocation\": {\n" +
+                            "    \"type\": \"Point\",\n" +
+                            "    \"coordinates\": [\n" +
+                            "      51.5073509,\n" +
+                            "      -0.12775829999998223\n" +
+                            "    ]\n" +
+                            "  }\n" +
+                            "}")
+                    .put(BASE_URL + "/client"); //put - create; post - update
         }
     }
 
