@@ -13,13 +13,13 @@ public class CreateClient { //POST - Save CCT ProjectContract
                     .header(KM_AUTH, SESSION_TOKEN)
                     .header("Content-Type", "application/json")
                     .body("{\n" +
-                            "  \"name\": \"Abdula Anusin\",\n" +
+                            "  \"name\": \"Борислав Фацолько\",\n" +
                             "  \"legalName\": \"Testlegalname\",\n" +
                             "  \"phone\": [\n" +
                             "    \"0001122\"\n" +
                             "  ],\n" +
                             "  \"email\": [\n" +
-                            "    \"(___!___)@gmail.com\"\n" +
+                            "    \"Borislav@gmail.com\"\n" +
                             "  ],\n" +
                             "  \"allowedPermissions\": [\n" +
                             "    \"user:user:create:general\",\n" +
@@ -33,7 +33,9 @@ public class CreateClient { //POST - Save CCT ProjectContract
                             "    ]\n" +
                             "  }\n" +
                             "}")
-                    .put(BASE_URL + "/client"); //put - create; post - update
+                    .put(BASE_URL + "/client") //put - create; post - update
+                    .then()
+                    .log().all();
         }
     }
 
