@@ -1,5 +1,7 @@
 package test;
 
+import com.jayway.restassured.response.Response;
+import com.jayway.restassured.response.ValidatableResponse;
 import org.hamcrest.Matchers;
 
 import static com.jayway.restassured.RestAssured.given;
@@ -9,17 +11,18 @@ public class CreateClient { //POST - Save CCT ProjectContract
 
         public void create() {
 
+            ValidatableResponse response =
             given().log().all()
                     .header(KM_AUTH, SESSION_TOKEN)
                     .header("Content-Type", "application/json")
                     .body("{\n" +
-                            "  \"name\": \"Борислав Фацолько\",\n" +
+                            "  \"name\": \"Гелька Пудель\",\n" +
                             "  \"legalName\": \"Testlegalname\",\n" +
                             "  \"phone\": [\n" +
                             "    \"0001122\"\n" +
                             "  ],\n" +
                             "  \"email\": [\n" +
-                            "    \"Borislav@gmail.com\"\n" +
+                            "    \"Gelka@gmail.com\"\n" +
                             "  ],\n" +
                             "  \"allowedPermissions\": [\n" +
                             "    \"user:user:create:general\",\n" +
