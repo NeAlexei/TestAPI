@@ -9,6 +9,7 @@ import static com.kinomo.config.Settings.*;
 import static javafx.scene.input.KeyCode.J;
 
 public class GetToken {
+
     public String token() {
 
         JSONObject jsonObj = new JSONObject()

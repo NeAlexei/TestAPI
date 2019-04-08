@@ -16,13 +16,13 @@ public class CreateClient { //POST - Save CCT ProjectContract
                     .header(KM_AUTH, SESSION_TOKEN)
                     .header("Content-Type", "application/json")
                     .body("{\n" +
-                            "  \"name\": \"Гелька Пудель\",\n" +
+                            "  \"name\": \"... ...\",\n" +
                             "  \"legalName\": \"Testlegalname\",\n" +
                             "  \"phone\": [\n" +
                             "    \"0001122\"\n" +
                             "  ],\n" +
                             "  \"email\": [\n" +
-                            "    \"Gelka@gmail.com\"\n" +
+                            "    \"...@gmail.com\"\n" +
                             "  ],\n" +
                             "  \"allowedPermissions\": [\n" +
                             "    \"user:user:create:general\",\n" +
