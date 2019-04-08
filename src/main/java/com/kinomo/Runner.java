@@ -6,6 +6,8 @@ import test.CreateClient;
 import test.GetToken;
 
 
+import java.util.ArrayList;
+
 import static com.jayway.restassured.RestAssured.given;
 import static com.kinomo.config.Settings.*;
 
@@ -20,6 +22,8 @@ public class Runner {
         CreateClient cc = new CreateClient();
         cc.create();
 
+
+        ArrayList<String> set
     }
 }
 
