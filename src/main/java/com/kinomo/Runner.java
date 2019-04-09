@@ -31,9 +31,11 @@ public class Runner {
         ArrayList<Double> sCoo = defLoc.setCoordinates();
         String sT = defLoc.setType();
 
-        DefaultLocation dLoc = new DefaultLocation(ArrayList<Double>sCoo, sT);
+        DefaultLocation dLoc = new DefaultLocation(sCoo, sT);
 
-        Client newClient = new Client("", "", sPerm, sPho, sEma, dLoc);
+        Client newClient = new Client("Имя", "Легалимя", sPerm, sPho, sEma, dLoc);
+
+
 
     }
 }
