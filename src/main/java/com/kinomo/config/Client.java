@@ -1,9 +1,7 @@
-//package com.kinomo.config;
-//import org.json.JSONObject;
+package com.kinomo.config;
+import org.json.JSONObject;
 import com.kinomo.config.DefaultLocation;
-
 import java.util.ArrayList;
-
 import static com.jayway.restassured.RestAssured.put;
 
 public class Client {
@@ -17,8 +15,7 @@ public class Client {
     private ArrayList<String> email;
     private DefaultLocation defaultLocation;
 
-    public Client(String _id, String name, String legalName, ArrayList<String> allowedPermissions, ArrayList<String> phone, ArrayList<String> email, DefaultLocation defaultLocation) {
-        this._id = _id;
+    public Client(String name, String legalName, ArrayList<String> allowedPermissions, ArrayList<String> phone, ArrayList<String> email, DefaultLocation defaultLocation) {
         this.name = name;
         this.legalName = legalName;
         this.allowedPermissions = allowedPermissions;

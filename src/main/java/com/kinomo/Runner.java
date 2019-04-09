@@ -1,6 +1,9 @@
 package com.kinomo;
 
 import com.jayway.restassured.path.json.JsonPath;
+import com.kinomo.config.Client;
+import com.kinomo.config.DefaultLocation;
+import com.kinomo.config.Params;
 import org.json.JSONObject;
 import test.CreateClient;
 import test.GetToken;
@@ -19,13 +22,18 @@ public class Runner {
         SESSION_TOKEN = getToken.token();
         System.out.println("Session token is: " + SESSION_TOKEN);
 
-        CreateClient cc = new CreateClient();
-        cc.create();
+        Params par = new Params();
+        ArrayList<String> sPerm = par.setAllowedPermission();
+        ArrayList<String> sPho = par.phone;
+        ArrayList<String> sEma = par.email;
 
+        DefaultLocation defLoc = new DefaultLocation(); //
+        ArrayList<Double> sCoo = defLoc.setCoordinates();
+        String sT = defLoc.setType();
 
+        DefaultLocation dLoc = new DefaultLocation(ArrayList<Double>sCoo, sT);
 
-
-
+        Client newClient = new Client("", "", sPerm, sPho, sEma, dLoc);
 
     }
 }
