@@ -19,13 +19,12 @@ public class GetToken {
 
         JsonPath G =
                 given()
-                        .contentType("application/json") //another way to specify content type
-                        .body(jsonObj.toString()) // use jsonObj toString method
+                        .contentType("application/json")
+                        .body(jsonObj.toString())
                         .put(BASE_URL + "/session")
                         .jsonPath();
 
         String a = G.getString("message.sessionToken");
         return a;
-
     }
 }
