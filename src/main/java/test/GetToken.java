@@ -26,5 +26,6 @@ public class GetToken {
 
         String a = G.getString("message.sessionToken");
         return a;
+
     }
 }
