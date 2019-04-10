@@ -1,7 +1,7 @@
 package test;
-import ch.qos.logback.core.net.server.Client;
+import com.kinomo.config.Client;
+
 import com.kinomo.config.DefaultLocation;
-import
 
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.response.ValidatableResponse;

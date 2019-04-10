@@ -26,7 +26,7 @@ public class DefaultLocation {
         setaList(lt, lng);
         this.type = type;
     }
-//
+
 //    public List<Double> setCoordinates() {
 //        aList.add(51.456882);
 //        aList.add(-0.196399);

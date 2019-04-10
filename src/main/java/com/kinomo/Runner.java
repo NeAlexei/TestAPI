@@ -1,18 +1,12 @@
 package com.kinomo;
 
-import com.jayway.restassured.path.json.JsonPath;
 import com.kinomo.config.Client;
 import com.kinomo.config.DefaultLocation;
 import com.kinomo.config.Params;
-import org.json.JSONObject;
 import test.CreateClient;
 import test.GetToken;
-
-
 import java.util.ArrayList;
-import java.util.List;
 
-import static com.jayway.restassured.RestAssured.given;
 import static com.kinomo.config.Settings.*;
 
 public class Runner {
@@ -29,7 +23,12 @@ public class Runner {
         ArrayList<String> sEmail = par.sEmail();
 
         DefaultLocation defLoc = new DefaultLocation(51.456882, -0.196399, "Point");
-        Client newClient = new Client("Name", "LegalName", sPermission, sPhone, sEmail, defLoc);
+
+        Client newCli = new Client("Нейм", "Легалнеймович", sPermission, sPhone, sEmail, defLoc);
+
+        CreateClient cc = new CreateClient();
+        cc.create(newCli);
+        System.out.println("Email of " + newCli.getName() + "is " + newCli.getEmail());
     }
 }
 
