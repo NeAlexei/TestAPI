@@ -1,30 +1,42 @@
 package com.kinomo.config;
 
 import java.util.ArrayList;
+import java.util.List;
+
 import static jdk.nashorn.internal.runtime.regexp.joni.Syntax.Java;
 
 public class DefaultLocation {
-    public ArrayList<Double> aList;
+    public List<Double> aList;
     public String type;
 
     public DefaultLocation() { //
     }
 
-    public DefaultLocation(ArrayList<Double> aList, String type) {
-        this.aList = aList;
-        this.type = type;
-    }
-
-    public ArrayList<Double> setCoordinates() {
-        aList.add(51.456882);
-        aList.add(-0.196399);
+    public List<Double> getaList() {
         return aList;
     }
 
-    public String setType() {
-        type = "Point";
-        return type;
+    public void setaList(Double lt, Double lng) {
+        aList = new ArrayList<>();
+        aList.add(lt);
+        aList.add(lng);
     }
+
+    public DefaultLocation(Double lt, Double lng, String type) {
+        setaList(lt, lng);
+        this.type = type;
+    }
+//
+//    public List<Double> setCoordinates() {
+//        aList.add(51.456882);
+//        aList.add(-0.196399);
+//        return aList;
+//    }
+//
+//    public String setType() {
+//        type = "Point";
+//        return type;
+//    }
 
     public String getType() {
         return type;

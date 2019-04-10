@@ -10,6 +10,7 @@ import test.GetToken;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static com.jayway.restassured.RestAssured.given;
 import static com.kinomo.config.Settings.*;
@@ -23,20 +24,12 @@ public class Runner {
         System.out.println("Session token is: " + SESSION_TOKEN);
 
         Params par = new Params();
-        ArrayList<String> sPerm = par.setAllowedPermission();
-        ArrayList<String> sPho = par.phone;
-        ArrayList<String> sEma = par.email;
+        ArrayList<String> sPermission = par.sAllowedPermission();
+        ArrayList<String> sPhone = par.sPhone();
+        ArrayList<String> sEmail = par.sEmail();
 
-        DefaultLocation defLoc = new DefaultLocation(); //
-        ArrayList<Double> sCoo = defLoc.setCoordinates();
-        String sT = defLoc.setType();
-
-        DefaultLocation dLoc = new DefaultLocation(sCoo, sT);
-
-        Client newClient = new Client("Имя", "Легалимя", sPerm, sPho, sEma, dLoc);
-
-
-
+        DefaultLocation defLoc = new DefaultLocation(51.456882, -0.196399, "Point");
+        Client newClient = new Client("Name", "LegalName", sPermission, sPhone, sEmail, defLoc);
     }
 }
 

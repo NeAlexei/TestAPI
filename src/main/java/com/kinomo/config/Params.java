@@ -6,19 +6,19 @@ public class Params {
     public ArrayList<String> phone;
     public ArrayList<String> email;
 
-    public ArrayList<String> setAllowedPermission() {
+    public ArrayList<String> sAllowedPermission() {
         allowedPermission.clear();
         allowedPermission.add("user:user:create:general");
         return allowedPermission;
     }
 
-    public ArrayList<String> setPhone(){
+    public ArrayList<String> sPhone(){
         phone.clear();
         phone.add("0000-111-222");
         return phone;
     }
 
-    public ArrayList<String> setEmail(){
+    public ArrayList<String> sEmail(){
         email.clear();
         email.add("SomethingEmail@gmail.com");
         return email;
