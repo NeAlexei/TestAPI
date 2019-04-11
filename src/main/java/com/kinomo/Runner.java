@@ -17,17 +17,18 @@ public class Runner {
         SESSION_TOKEN = getToken.token();
         System.out.println("Session token is: " + SESSION_TOKEN);
 
-        Params par = new Params();
-        ArrayList<String> sPermission = par.sAllowedPermission();
-        ArrayList<String> sPhone = par.sPhone();
-        ArrayList<String> sEmail = par.sEmail();
+            Params par = new Params();
+            ArrayList<String> sPermission = par.sAllowedPermission();
+            ArrayList<String> sPhone = par.sPhone();
+            ArrayList<String> sEmail = par.sEmail();
 
-        DefaultLocation defLoc = new DefaultLocation(51.456882, -0.196399, "Point");
+            DefaultLocation defLoc = new DefaultLocation(51.456882, -0.196399, "Point");
 
-        Client newCli = new Client("Нейм", "Легалнеймович", sPermission, sPhone, sEmail, defLoc);
+            Client newCli = new Client("Нейм", "Легалнеймович", sPermission, sPhone, sEmail, defLoc);
 
-        CreateClient cc = new CreateClient();
-        cc.create(newCli);
+            CreateClient cc = new CreateClient();
+            cc.create(newCli);
+
         System.out.println("Email of " + newCli.getName() + "is " + newCli.getEmail());
     }
 }
