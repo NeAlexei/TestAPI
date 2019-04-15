@@ -24,7 +24,7 @@ public class Runner {
 
             DefaultLocation defLoc = new DefaultLocation(51.456882, -0.196399, "Point");
 
-            Client newCli = new Client("Нейм", "Легалнеймович", sPermission, sPhone, sEmail, defLoc);
+            Client newCli = new Client("Нейм", "Легалнейм", sPermission, sPhone, sEmail, defLoc);
 
             CreateClient cc = new CreateClient();
             cc.create(newCli);
