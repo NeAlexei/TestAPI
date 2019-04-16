@@ -29,7 +29,8 @@ public class Runner {
             CreateClient cc = new CreateClient();
             cc.create(newCli);
 
-        System.out.println("Email of " + newCli.getName() + "is " + newCli.getEmail());
+        System.out.println("Email of " + newCli.getName() + " client is " + newCli.getEmail());
+
     }
 }
 
