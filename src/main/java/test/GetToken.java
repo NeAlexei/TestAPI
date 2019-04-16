@@ -4,9 +4,7 @@ import com.jayway.restassured.path.json.JsonPath;
 import org.json.JSONObject;
 
 import static com.jayway.restassured.RestAssured.given;
-import static com.jayway.restassured.RestAssured.put;
 import static com.kinomo.config.Settings.*;
-import static javafx.scene.input.KeyCode.J;
 
 public class GetToken {
 

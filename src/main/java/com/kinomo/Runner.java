@@ -6,7 +6,6 @@ import com.kinomo.config.Params;
 import test.CreateClient;
 import test.GetToken;
 import java.util.ArrayList;
-
 import static com.kinomo.config.Settings.*;
 
 public class Runner {
@@ -24,49 +23,14 @@ public class Runner {
 
             DefaultLocation defLoc = new DefaultLocation(51.456882, -0.196399, "Point");
 
-            Client newCli = new Client("Нейм", "Легалнейм", sPermission, sPhone, sEmail, defLoc);
+            Client newCli = new Client("00", "OAO ROGA I KOPITA", sPermission, sPhone, sEmail, defLoc);
 
             CreateClient cc = new CreateClient();
             cc.create(newCli);
 
-        System.out.println("Email of " + newCli.getName() + " client is " + newCli.getEmail());
+        System.out.println("\n" + "--- --- ---" + "\n" + "Client's name is: " + newCli.getName());
+        System.out.println("Client's legalname is: " + newCli.getName());
+        System.out.println("Client's email is: " + newCli.getEmail() + "\n" + "--- --- ---");
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//        Cred NewCred = new Cred();
-//        NewCred.setUsername("a.nechitaylo@hypervsn.com");
-//        NewCred.setPassword("4ebbz9w7");
-//        NewCred.setRememberMe(Boolean.FALSE);
-//
-//        AuthenticationToken NewAuthToken =
-//                given()
-//                    .accept("application/json")
-//                    .contentType("application/json")
-//
-//                        .body(NewCred)
-//
-//                    .expect()
-//                    .statusCode(200)
-//                    .when()
-//                    .post("https://stage-platform.kino-mo.com")
-//                    .then()
-//                    .log().all()
-//                    .extract()
-//                    .body().as(NewAuthToken.class);
-
-//        assertNotNull(NewAuthToken.getToken());

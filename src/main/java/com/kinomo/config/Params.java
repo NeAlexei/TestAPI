@@ -14,13 +14,13 @@ public class Params {
 
     public ArrayList<String> sPhone(){
         phone.clear();
-        phone.add("0000-111-222");
+        phone.add("+00000-000-00-00");
         return phone;
     }
 
     public ArrayList<String> sEmail(){
         email.clear();
-        email.add("SomethingEmail@gmail.com");
+        email.add("00@gmail.com");
         return email;
     }
 }

@@ -1,11 +1,7 @@
 package test;
 import com.kinomo.config.Client;
 
-import com.kinomo.config.DefaultLocation;
-
-import com.jayway.restassured.response.Response;
 import com.jayway.restassured.response.ValidatableResponse;
-import org.hamcrest.Matchers;
 
 import static com.jayway.restassured.RestAssured.given;
 import static com.kinomo.config.Settings.*;
