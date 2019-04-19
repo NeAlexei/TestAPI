@@ -1,11 +1,14 @@
 package com.kinomo.config;
 import org.json.JSONObject;
 import com.kinomo.config.DefaultLocation;
+import org.json.JSONPropertyName;
+
 import java.util.ArrayList;
 import static com.jayway.restassured.RestAssured.put;
 
 public class Client {
 
+//    @JSONPropertyName("_id")
     private String _id;
     private String name;
     private String legalName;

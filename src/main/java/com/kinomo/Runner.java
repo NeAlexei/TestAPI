@@ -3,14 +3,13 @@ package com.kinomo;
 import com.kinomo.config.Client;
 import com.kinomo.config.DefaultLocation;
 import com.kinomo.config.Params;
-import mongo.Mongo;
-import org.mongodb.morphia.Morphia;
+
+import morphia.Morphia;
 import test.CreateClient;
+import test.GetClient;
 import test.GetToken;
 import java.util.ArrayList;
 import static com.kinomo.config.Settings.*;
-import static mongo.Mongo.connectToDb;
-
 
 public class Runner {
 
@@ -27,7 +26,7 @@ public class Runner {
 
             DefaultLocation defLoc = new DefaultLocation(51.456882, -0.196399, "Point");
 
-            Client newCli = new Client("999", "OAO ROGA I KOPITA", sPermission, sPhone, sEmail, defLoc);
+            Client newCli = new Client("Kebab", "OOO Fitnes Shaurma", sPermission, sPhone, sEmail, defLoc);
 
             CreateClient cc = new CreateClient();
             cc.create(newCli);
@@ -36,7 +35,8 @@ public class Runner {
         System.out.println("Client's legalname is: " + newCli.getLegalName());
         System.out.println("Client's email is: " + newCli.getEmail() + "\n" + "--- --- ---");
 
-
+        GetClient gC = new GetClient();
+        gC.getClient("5cb58b749c5c684dae21a67a");
 
     }
 }

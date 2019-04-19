@@ -12,6 +12,5 @@ public class Settings {
 
     public static final String DB_HOST = "mongodb://10.10.0.27:27017, 10.10.0.26:27017, 10.10.0.28:27017";
     public static final String DB_NAME = "Stage-platform.kino-mo.com";
-
     }
 

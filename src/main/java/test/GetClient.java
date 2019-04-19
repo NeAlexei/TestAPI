@@ -1,23 +1,22 @@
 package test;
-import com.kinomo.config.Client;
 import com.jayway.restassured.response.ValidatableResponse;
+import com.kinomo.config.Client;
 import static com.jayway.restassured.RestAssured.given;
 import static com.kinomo.config.Settings.*;
 
-public class CreateClient { //POST - Save CCT ProjectContract
+public class GetClient {
 
-        public Client create(Client client) {
+        public Client getClient(String ClientId) {
 
             ValidatableResponse response =
             given().log().all()
                     .header(KM_AUTH, SESSION_TOKEN)
                     .header("Content-Type", "application/json")
-                    .body(client)
-                    .put(BASE_URL + "/client") //put - create; post - update
+                    .get(BASE_URL + "/client")
                     .then()
                     .log().all();
 
-            return response.extract().body().jsonPath().getObject("message", Client.class);
+            return response.extract().jsonPath().getObject("message", Client.class);
 
         }
 }
