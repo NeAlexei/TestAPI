@@ -12,7 +12,7 @@ public class GetClient {
             given().log().all()
                     .header(KM_AUTH, SESSION_TOKEN)
                     .header("Content-Type", "application/json")
-                    .get(BASE_URL + "/client")
+                    .get(BASE_URL + "/client/" + ClientId)
                     .then()
                     .log().all();
 

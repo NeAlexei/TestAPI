@@ -20,7 +20,7 @@ public class Params {
 
     public ArrayList<String> sEmail(){
         email.clear();
-        email.add("999@gmail.com");
+        email.add("Kebab@gmail.com");
         return email;
     }
 }

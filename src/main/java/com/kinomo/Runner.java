@@ -26,17 +26,19 @@ public class Runner {
 
             DefaultLocation defLoc = new DefaultLocation(51.456882, -0.196399, "Point");
 
-            Client newCli = new Client("Kebab", "OOO Fitnes Shaurma", sPermission, sPhone, sEmail, defLoc);
+            Client newCli = new Client("Kebab", "OOO Fitness Shaurma", sPermission, sPhone, sEmail, defLoc);
 
-            CreateClient cc = new CreateClient();
-            cc.create(newCli);
+//            CreateClient cc = new CreateClient();
+//            cc.create(newCli);
 
-        System.out.println("\n" + "--- --- ---" + "\n" + "Client's name is: " + newCli.getName());
-        System.out.println("Client's legalname is: " + newCli.getLegalName());
-        System.out.println("Client's email is: " + newCli.getEmail() + "\n" + "--- --- ---");
+//        System.out.println("\n" + "--- --- ---" + "\n" + "Client's name is: " + newCli.getName());
+//        System.out.println("Client's legalname is: " + newCli.getLegalName());
+//        System.out.println("Client's email is: " + newCli.getEmail() + "\n" + "--- --- ---");
 
-        GetClient gC = new GetClient();
-        gC.getClient("5cb58b749c5c684dae21a67a");
+//        GetClient gC = new GetClient(); //Get client by id
+//        gC.getClient("58a0a723787b9a192aa39f1f");
 
+        Morphia m = new Morphia();
+        m.initMorphia();
     }
 }

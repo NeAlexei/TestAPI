@@ -13,10 +13,12 @@ public class Morphia {
         org.mongodb.morphia.Morphia morphia = new org.mongodb.morphia.Morphia();
         Datastore datastore = morphia.createDatastore(new MongoClient(new MongoClientURI(DB_HOST)), DB_NAME);
 
-        morphia.mapPackage("main.java.morphia.Morphia");
+        morphia.mapPackage("main.java.morphia");
 
-        System.out.println("- - -" + datastore.getCount(Client.class));
+        System.out.println("- - -" + "\n" + datastore.getCount(Client.class));
+
         datastore.getCollection(Client.class);
+
         Client client = datastore.find(Client.class).field("_id").equal("5cb58b749c5c684dae21a67a").get();
 
     }
