@@ -1,9 +1,13 @@
 package com.kinomo.config;
 
+import org.mongodb.morphia.annotations.Id;
+
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class DefaultLocation {
+    @Id
     public List<Double> aList;
     public String type;
 

@@ -1,4 +1,6 @@
 package com.kinomo.config;
+import org.mongodb.morphia.annotations.Id;
+
 import java.util.ArrayList;
 
 public class Params {
@@ -20,7 +22,7 @@ public class Params {
 
     public ArrayList<String> sEmail(){
         email.clear();
-        email.add("Kebab@gmail.com");
+        email.add("Q@gmail.com");
         return email;
     }
 }

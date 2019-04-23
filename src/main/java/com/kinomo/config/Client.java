@@ -2,13 +2,16 @@ package com.kinomo.config;
 import org.json.JSONObject;
 import com.kinomo.config.DefaultLocation;
 import org.json.JSONPropertyName;
+import org.mongodb.morphia.annotations.Embedded;
+import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Id;
 
 import java.util.ArrayList;
 import static com.jayway.restassured.RestAssured.put;
 
+@Entity("client")
 public class Client {
-
-//    @JSONPropertyName("_id")
+    @Id
     private String _id;
     private String name;
     private String legalName;
