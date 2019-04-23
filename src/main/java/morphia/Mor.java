@@ -14,7 +14,9 @@ public class Mor {
 
         Morphia morphia = new Morphia();
         Datastore datastore = morphia.createDatastore(new MongoClient(new MongoClientURI(DB_HOST)), DB_NAME);
-        morphia.map(Client.class);
+
+//        morphia.map(Client.class);
+        morphia.mapPackage("main.java.com.kinomo.config.Client");
 
         System.out.println("- - -" + "\n" + datastore.getCount(Client.class));
         datastore.find(Client.class).field("name").equal("Kebab").get();
