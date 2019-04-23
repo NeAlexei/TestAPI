@@ -7,7 +7,7 @@ import java.util.List;
 
 
 public class DefaultLocation {
-    @Id
+
     public List<Double> aList;
     public String type;
 

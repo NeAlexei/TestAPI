@@ -9,9 +9,9 @@ import org.mongodb.morphia.annotations.Id;
 import java.util.ArrayList;
 import static com.jayway.restassured.RestAssured.put;
 
-@Entity("client")
+@Entity("Client")
 public class Client {
-    @Id
+@Id
     private String _id;
     private String name;
     private String legalName;
