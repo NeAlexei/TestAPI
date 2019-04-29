@@ -13,7 +13,10 @@ import static com.jayway.restassured.RestAssured.put;
 public class Client {
 @Id
     private String _id;
+
     private String name;
+    public static final String NAME_FIELD = "name";
+
     private String legalName;
 
     private ArrayList<String> allowedPermissions;
